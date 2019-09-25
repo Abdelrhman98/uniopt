@@ -1,0 +1,31 @@
+.app{
+    margin-top:30px;
+}
+.main{
+    color:#ddd;
+    background-image: linear-gradient(to right,#667eea , #764ba2);
+    //background-image: linear-gradient(to right,#09203f, #537895);
+    //background-image: linear-gradient(to right,#667eea , #764ba2);
+    height: 100vh;
+    padding: 50px 0px;
+}
+
+.btn_c_primary{
+    background-color: #120c6e;
+    color:#fff;
+}
+.mar_30{
+    margin-top:30px;
+}
+
+.panel-color{
+    background-color: #5e72eb;
+}
+::ng-deep  .mat-step-icon {
+    background-color: #bb092d!important;
+    color: rgba(255,255,255,.87);
+  }
+
+  div.mat-step-header.mat-step-header-ripple{
+    background-color: #bb092d!important;
+  }

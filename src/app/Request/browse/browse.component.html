@@ -1,0 +1,62 @@
+<mat-accordion>
+
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" >
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Experiment Name
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="example-container">
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Enter Experiment Name Here">
+            </mat-form-field>
+        </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" >
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Weather File Location
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="example-container">
+            <div class="row">
+                <div class="col-md-10 example-container">
+                    <mat-form-field appearance="outline">
+                        <input matInput placeholder="Browse Weather File Location">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 btn-pading">
+                    <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+                    <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+                </div>
+            </div>
+        </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" >
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Model File Location
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="example-container">
+            <div class="row">
+                <div class="col-md-10 example-container">
+                    <mat-form-field appearance="outline">
+                        <input matInput placeholder="Browse Model File Location">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2 btn-pading">
+                    <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+                    <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+                </div>
+            </div>
+        </div>
+    </mat-expansion-panel>
+
+</mat-accordion>
+
+
+
+

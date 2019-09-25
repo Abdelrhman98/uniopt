@@ -1,0 +1,42 @@
+
+
+<router-outlet></router-outlet>
+<section class="main">
+	<div class="container">
+		<h2 class="display-4">
+			UNIOPT
+		</h2>
+		<mat-vertical-stepper #stepper>
+			<mat-step [stepControl]="firstFormGroup" class="panel-color">
+				<form [formGroup]="firstFormGroup" >
+					<ng-template matStepLabel >Experiment Information</ng-template>
+					<app-browse></app-browse>
+					<div>
+						<button mat-raised-button matStepperNext class="btn_c_primary mar_30">Next</button>
+					</div>
+				</form>
+			</mat-step>
+
+			<mat-step [stepControl]="secondFormGroup">
+				<form [formGroup]="secondFormGroup">
+					<ng-template matStepLabel>Optimization parameters</ng-template>
+					<app-op-config></app-op-config>
+					<div class="mar_30">
+						<button mat-button matStepperPrevious >Back</button>
+						<button mat-raised-button matStepperNext class="btn_c_primary">Add Parameter</button>
+					</div>
+				</form>
+			</mat-step>
+
+			<mat-step>
+				<ng-template matStepLabel>Done</ng-template>
+				You are now done.
+				<div>
+					<button mat-button matStepperPrevious>Back</button>
+					<button mat-button (click)="stepper.reset()">Reset</button>
+				</div>
+			</mat-step>
+
+		</mat-vertical-stepper>
+	</div>
+</section>
