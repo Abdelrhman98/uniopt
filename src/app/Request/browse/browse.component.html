@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-md-2 btn-pading">
                     <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
-                    <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+                    <input accept=".epw" hidden (change)="onFileSelected()" #fileInput type="file" id="file">
                 </div>
             </div>
         </div>
@@ -46,16 +46,20 @@
                     <mat-form-field appearance="outline">
                         <input matInput placeholder="Browse Model File Location">
                     </mat-form-field>
-                </div>
+                </div> 
                 <div class="col-md-2 btn-pading">
-                    <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
-                    <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+                    <button type="button" mat-raised-button (click)="fileInput2.click()">Choose File</button>
+                    <input accept=".idf" hidden (change)="onFileSelected2()" #fileInput2 type="file" id="file2">
                 </div>
             </div>
         </div>
+        
     </mat-expansion-panel>
-
+    <div>
+        <button mat-raised-button matStepperNext class="btn_c_primary mar_30" (click)="onClickNext()">Next</button>
+    </div>
 </mat-accordion>
+
 
 
 

@@ -9,7 +9,7 @@ import { BrowseComponent } from './Request/browse/browse.component';
 import { OpConfigComponent } from './optmization/op-config/op-config.component';
 import { AlConfigComponent } from './algo/al-config/al-config.component';
 import { ExpConfigComponent } from './experiment/exp-config/exp-config.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import { ExpConfigComponent } from './experiment/exp-config/exp-config.component
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     
