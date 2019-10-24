@@ -8,6 +8,8 @@ import { MatAutocompleteModule    } from '@angular/material';
 import { MatSelectModule          } from '@angular/material/select';
 
 
+import {MatTableModule} from '@angular/material/table'; 
+
 
 
 const materialCpmponent = [
@@ -16,7 +18,8 @@ const materialCpmponent = [
   MatExpansionModule,
   MatStepperModule,
   MatAutocompleteModule,
-  MatSelectModule
+  MatSelectModule,
+  MatTableModule
 ];
 
 @NgModule({

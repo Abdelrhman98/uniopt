@@ -20,7 +20,7 @@
   },
   "include": [
     "main.ts",
-    "src/**/*"
+    "src/**/*", "gulpfile.js"
   ],
   "exclude": [
     "node_modules"

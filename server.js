@@ -9,10 +9,11 @@ app.use(express.static(__dirname + '/dist/front'));
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/front/index.html'));
 });
+
 let options = {
   args: ['5000']
 };
-PythonShell.run('server/main.py', options, null, function (err) {
+PythonShell.run('server/uniopt-server/main.py', options, null, function (err) {
   if (err) throw err;
   console.log('finished');
 });
